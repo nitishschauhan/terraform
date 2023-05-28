@@ -1,0 +1,15 @@
+repos:
+- repo: https://github.com/gruntwork-io/pre-commit
+  rev: v0.1.22
+  #rev: <VERSION> # Get the latest from: https://github.com/gruntwork-io/pre-commit/releases
+  hooks:
+    - id: terraform-validate
+    - id: terraform-fmt
+- repo: https://github.com/antonbabenko/pre-commit-terraform.git
+  #rev: v1.79.1
+  rev: v1.62.3
+  # rev: <VERSION> # Get the latest from:pre-commit install
+  hooks:
+    # - id: terraform_tfsec
+    - id: terraform_docs
+    - id: terraform_fmt 

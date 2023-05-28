@@ -43,10 +43,10 @@ module "ec2_instance" {
 # Docker Setup using ansible
 #############################
 
-resource "null_resource" "exec" {
+# resource "null_resource" "exec" {
 
-  provisioner "local-exec" {
-    command = "ansible-playbook -u ubuntu -i ${module.ec2_instance.public_ip}, --private-key 'deployer-key.pem' ../../ansible/roles.yaml"
-  }
-  depends_on = [module.create_vpc, module.security_group, module.ec2_instance]
-}
+#   provisioner "local-exec" {
+#     command = "ansible-playbook -u ubuntu -i ${module.ec2_instance.public_ip}, --private-key 'deployer-key.pem' ../../ansible/roles.yaml"
+#   }
+#   depends_on = [module.create_vpc, module.security_group, module.ec2_instance]
+# }
